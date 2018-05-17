@@ -347,6 +347,36 @@
         </div>
       </div>
       <div id="test-swipe-3" class="col s12">
+
+        <div class="row">
+          <div class="col s12">
+            <div class="card  z-depth-3">
+              <div class="card-content">
+                <div class="input-field">
+                  <textarea class="materialize-textarea" placeholder="Type your Question...." id="message"></textarea>
+                  <label for="message">Question</label>
+                </div>
+                <div class="file-field input-field">
+                  <div class="btn blue darken-2 waves-effect waves-light">
+                    <span>Files
+                      <i class="material-icons right">attachments</i>
+                    </span>
+                    <input type="file">
+                  </div>
+                  <div class="right">
+                    <button class="btn blue darken-2 waves-effect waves-light" type="submit" name="action">Submit
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                  <br>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <ul class="collapsible">
           <li>
             <div class="collapsible-header">
@@ -421,9 +451,7 @@
               </a>
             </div>
           </li>
-          <a class="btn-floating waves-effect right quesadd fixed waves-light blue darken-3">
-            <i class="material-icons ">add</i>
-          </a>
+
           <li>
             <div class="collapsible-header">
               <h6 class="ques"> 9. What is Virtualization? </h6>
@@ -580,8 +608,18 @@
         </ul>
       </div>
       <div id="test-swipe-4" class="col s12">
-        <h4 class=" grey-text" style="padding: 0px 0px 7px 20px;">Group - B
-        </h4>
+        <div class="row">
+          <div class="col s5 offset-s1">
+            <h4 class="grey-text">Group - B</h4>
+          </div>
+          <br>
+          <div class="col s3">
+            <a href="mailto:jdoe@gmail.com, bsmith@yahoo.com, jill@gmail.com, kevin@yahoo.com">
+              <i class="material-icons teal-text "> email </i>
+            </a>
+          </div>
+        </div>
+
         <ul class="collection">
           <li class="collection-item avatar">
             <i class="material-icons circle green">person</i>
@@ -604,7 +642,7 @@
             </a>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle green">email</i>
+            <i class="material-icons circle green">person</i>
             <span class="title">Jill Johnson</span>
             <p>jill@gmail.com
               <br> 44003144
@@ -614,7 +652,7 @@
             </a>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle green">phone</i>
+            <i class="material-icons circle green">person</i>
             <span class="title">Kevin Wallace</span>
             <p>kevin@yahoo.com
               <br> 44003188
@@ -625,26 +663,70 @@
           </li>
         </ul>
         <div class="row">
-          <div class="col s12 ">
+          <div class="col s12">
             <div class="card transparent">
               <div class="card-content">
-                <a href="https://www.facebook.com/groups/1842544992684881/">
-                  <i class="fab fa-facebook fa-5x"></i>
-                </a>
-                <a href="https://www.slack.com">
-                  <i class="fab fa-slack fa-5x"></i>
-                </a>
-                <a href="https://www.skype.com">
-                  <i class="fab fa-skype fa-5x"></i>
-                </a>
+                <div class="col s3">
+                  <a href="https://www.facebook.com/groups/1842544992684881/">
+                    <i class="fab fa-facebook fa-4x teal-text"></i>
+                  </a>
+                </div>
+                <div class="col s3">
+                  <a href="https://uqcs.slack.com/messages/C3ZRGCRNE">
+                    <i class="fab fa-slack fa-4x teal-text"></i>
+                  </a>
+                </div>
+                <div class="col s3">
+                  <a href="https://www.skype.com">
+                    <i class="fab fa-skype fa-4x teal-text"></i>
+                  </a>
+                </div>
+                <div class="col s3"></div>
                 <a href="https://www.googledrive.com">
-                  <i class="fab fa-google-drive fa-5x"></i>
+                  <i class="fab fa-google-drive fa-4x teal-text"></i>
                 </a>
               </div>
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col s12">
+            <div class="card z-depth-2">
+              <div class="card-content">
+                <div class="card-title center">
+                  Schedule Group Meeting
+                </div>
+              </div>
+              <div class="card-action">
+                <div class="col s4">
+                  <div class="input-field">
+                    <input type="text" class="datepicker" id="date">
+                    <label for="date">Date</label>
+                  </div>
+                </div>
+                <div class="col s2">
+                  <div class="input-field">
+                    <input type="text" class="timepickerr" id="time">
+                    <label for="time">Time</label>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="input-field">
+                    <input placeholder="Purpose" id="name" type="text">
+                    <label for="name"></label>
+                  </div>
+                </div>
+                <div class=" center">
+                  <a class="waves-effect waves-light btn">confirm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
       </div>
+    </div>
     </div>
   </section>
 
@@ -670,6 +752,22 @@
       $('.button-collapse').sideNav();
       $('.modal').modal();
       $('.collapsible').collapsible();
+
+      $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: true,
+        closeOnSelect: true,
+      })
+
+      $('.timepickerr').pickatime({
+        default: 'now',
+        twelvehour: false,
+        donetext: 'go',
+        closetext: 'close',
+        cleartext: '',
+        autoclose: true
+      })
+
     });
   </script>
 </body>
