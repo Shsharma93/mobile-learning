@@ -1,0 +1,42 @@
+.signbutton {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.nav {
+  height: 80px;
+  line-height: 80px;
+}
+
+.top-header {
+  margin-top: 20px;
+}
+
+.course-code {
+  font-size: 50px;
+}
+
+.coursecards {
+  margin: 20px;
+}
+
+.login-body {
+  background: white;
+}
+
+.tab-size {
+  font-size: 30px;
+}
+
+.navtab {
+  height: 40px;
+}
+
+.ques {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.quesadd {
+  margin-right: 20px;
+}
